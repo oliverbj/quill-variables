@@ -6,10 +6,10 @@ import pkg from "./package.json";
 
 export default [
   {
-    input: "src/quill.mention.js",
+    input: "src/quill.variable.js",
     output: [
       {
-        file: "docs/quill.mention.min.js",
+        file: "docs/quill.variable.min.js",
         format: "iife",
         name: "quillMention",
         plugins: [terser()],
@@ -18,7 +18,7 @@ export default [
         }
       },
       {
-        file: "dist/quill.mention.min.js",
+        file: "dist/quill.variable.min.js",
         format: "iife",
         name: "quillMention",
         plugins: [terser()],
@@ -40,7 +40,7 @@ export default [
     ]
   },
   {
-    input: "src/quill.mention.js",
+    input: "src/quill.variable.js",
     output: [
       {
         file: pkg.main,
@@ -58,7 +58,7 @@ export default [
         exclude: ["node_modules/**"]
       }),
       postcss({
-        extract: "dist/quill.mention.css"
+        extract: "dist/quill.variable.css"
       })
     ]
   }
